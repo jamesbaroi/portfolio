@@ -1,0 +1,24 @@
+html, body, a {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus {
+  outline: none;
+}
+
+body {
+  --c1: #DEE1E6;
+  --c2: #BABCBE;
+  --c3: #5F6368;
+  --c4: #202124;
+  --c5: royalblue;
+  --c6: #002366;
+  --c7: #5F6368;
+  --c8: #BABCBE;
+}
