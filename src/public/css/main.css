@@ -39,18 +39,6 @@ body img {
 }
 
 @media screen and (prefers-color-scheme: dark) {
-  body {
-    --c1: #121212;
-    --c2: #202124;
-    --c3: #5F6368;
-    --c4: #BABCBE;
-    --c5: #00FFFF;
-    --c6: #ff69b4;
-    --c7: #5F6368;
-  }
-  body img {
-    filter: brightness(0.8) contrast(1.2);
-  }
   body.light-theme {
     --c1: #DEE1E6;
     --c2: #BABCBE;
@@ -76,7 +64,7 @@ html, body {
 }
 
 body {
-  background-color: var(--c2);
+  background-color: var(--c1);
   color: var(--c4);
   font-family: sans-serif;
   font-size: 16px;
@@ -84,7 +72,8 @@ body {
 }
 
 #b1 {
-  background-color: var(--c1);
+  display: flex;
+  justify-content: space-between;
   font-size: 1em;
   line-height: 1em;
   padding: 1em;
@@ -101,14 +90,6 @@ body {
   transition: 0.6s;
 }
 
-@media (hover: hover) {
-  .menu-btn:hover {
-    background-color: var(--c5);
-  }
-  .menu-btn:hover .bar1, .menu-btn:hover .bar2, .menu-btn:hover .bar3 {
-    background-color: var(--c1);
-  }
-}
 .bars {
   transition: 0.6s;
 }
@@ -141,4 +122,13 @@ body {
 
 .menu-btn-clk .menu-btn {
   background-color: var(--c5);
+}
+
+@media (hover: hover) {
+  .menu-btn:hover {
+    background-color: var(--c5);
+  }
+  .menu-btn:hover .bar1, .menu-btn:hover .bar2, .menu-btn:hover .bar3 {
+    background-color: var(--c1);
+  }
 }
