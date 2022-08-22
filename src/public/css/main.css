@@ -64,7 +64,7 @@ html, body {
 }
 
 body {
-  background-color: var(--c1);
+  background-color: var(--c2);
   color: var(--c4);
   font-family: sans-serif;
   font-size: 16px;
@@ -72,10 +72,16 @@ body {
 }
 
 #b1 {
+  background-color: var(--c1);
+  color: var(--c3);
   display: flex;
   justify-content: space-between;
-  font-size: 1em;
-  line-height: 1em;
+  padding: 1em;
+}
+
+#b2 {
+  background-color: var(--c2);
+  display: grid;
   padding: 1em;
 }
 
@@ -131,4 +137,19 @@ body {
   .menu-btn:hover .bar1, .menu-btn:hover .bar2, .menu-btn:hover .bar3 {
     background-color: var(--c1);
   }
+}
+.cntr {
+  margin: auto;
+}
+
+.cntrY {
+  margin: auto 0;
+}
+
+.cntrX {
+  margin: 0 auto;
+}
+
+.point {
+  cursor: pointer;
 }
