@@ -77,11 +77,18 @@ body {
   display: flex;
   font-size: 0.8em;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
 }
 
 #b2 {
   background-color: var(--c1);
   display: grid;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .mnu-btn {
@@ -140,34 +147,89 @@ body {
 #mnu {
   background-color: var(--c1);
   color: var(--c3);
-  height: 100%;
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
+  height: auto;
   opacity: 0;
   overflow-x: hidden;
-  padding: 0 10px;
   position: fixed;
   top: 56px;
   right: 0;
   transition: 0.6s;
   z-index: 1;
 }
-#mnu a, #mnu div {
+#mnu div {
   display: block;
-  font-size: 0.6em;
+  font-size: 0.8em;
   padding: 0 10px;
-  text-align: center;
+  text-align: right;
   transition: 0.6s;
+}
+#mnu a {
+  padding: 0 10px;
 }
 
 .cng1 #mnu {
   opacity: 1;
-  padding: 0 10px 10px;
 }
 
-.cng1 #mnu a, .cng1 #mnu div {
-  padding: 15px 10px;
+.cng1 #mnu div {
+  padding: 20px 10px;
+}
+.cng1 #mnu a {
+  padding: 10px;
+  width: 100%;
+}
+
+#me {
+  display: grid;
+  grid-template-rows: 1fr 1.5fr;
+  font-size: 0.8em;
+  height: 100vh;
+  line-height: 1.8em;
+  padding: 56px 0 0;
+  width: 100vw;
+}
+#me .cont {
+  margin: auto auto 0;
+}
+#me .pic {
+  border-radius: 50%;
+  height: 100px;
+  margin: auto auto 0;
+  width: 100px;
+}
+#me .inf {
+  color: var(--c3);
+  margin: 0 auto auto;
+  text-align: center;
+}
+#me .nm {
+  color: var(--c3);
+}
+#me .tt {
+  color: var(--c5);
+  font-size: 1.4em;
+}
+#me .gh {
+  padding: 0 1em;
+  transition: 0.6s;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--c1);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--c1);
+}
+
+::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+  height: auto;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--c5);
 }
 
 .cnr {
@@ -215,15 +277,31 @@ body {
   border-top: 0.1px solid var(--c7);
 }
 
+.hv1 {
+  transition: 0.6s;
+  border-radius: 20px;
+}
+
+.hv2 {
+  transition: 0.6s;
+  border-radius: 0px;
+}
+
+.hv3 {
+  transition: 0.6s;
+  border-radius: 0px;
+}
+
+.hv4 {
+  color: var(--c4);
+  transition: 0.6s;
+}
+
+.hv5 {
+  transition: 0.6s;
+}
+
 @media (hover: hover) {
-  .hv1 {
-    transition: 0.6s;
-    border-radius: 20px;
-  }
-  .hv2 {
-    transition: 0.6s;
-    border-radius: 0px;
-  }
   .hv1:hover {
     background-color: var(--c5);
     border-radius: 4px;
@@ -233,5 +311,19 @@ body {
     background-color: var(--c5);
     border-radius: 20px;
     color: var(--c1);
+  }
+  .hv3:hover {
+    background-color: var(--c2);
+    color: var(--c4);
+  }
+  .hv4:hover {
+    background-color: var(--c5);
+    color: var(--c1);
+    transition: 0.6s;
+    border-radius: 0px;
+  }
+  .hv5:hover {
+    color: var(--c5);
+    transition: 0.6s;
   }
 }
