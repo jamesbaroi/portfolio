@@ -1,2 +1,2 @@
 # Portfolio
-A portfolio site to demo projects
+A portfolio site to demo projects.
