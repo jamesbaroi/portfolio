@@ -7,3 +7,7 @@ export const routerMain = express.Router();
 routerMain.get('/', (req, res) => {
   res.render('index');
 });
+
+
+// Redirect
+routerMain.all('*', (req, res) => { res.redirect('/'); });

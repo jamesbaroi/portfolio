@@ -1,0 +1,81 @@
+<form id="frm1"
+class="frm1"
+name="frm1"
+action="/"
+onsubmit="return sbm2()"
+method="POST">
+  <legend>
+    <div class="lg">Customize Cookie Settings</div>
+    <div>
+      By clicking on "Confirm" you agree to allow necessary cookies as
+      well as the cookies you selected. Click on "more info" to learn more.
+    </div>
+  </legend>
+  <fieldset>
+    <span id="nec-i" class="cnrB" onclick="iNec()">more info</span>
+    <label for="ckNec"><span class="cnrB">Necessary</span>
+      <input type="checkbox"
+      class="pnt"
+      id="ckNec"
+      name="ckNec"
+      checked disabled>
+      <span class="chNec"></span>
+    </label>
+  </fieldset>
+  <div id="nec-d">
+    These cookies are necessary for this site to function properly and must be
+    allowed.
+  </div>
+  <fieldset>
+    <span id="per-i" class="cnrB" onclick="iPer()">more info</span>
+    <label for="ckPer" class="pnt"><span class="cnrB">Performance</span>
+      <input type="checkbox"
+      class="pnt"
+      id="ckPer"
+      name="ckPer">
+      <span class="chPer pnt"></span>
+    </label>
+  </fieldset>
+  <div id="per-d">
+    These cookies measure site visits and identify traffic sources to improve
+    site performance.
+  </div>
+  <fieldset>
+    <span id="fun-i" class="cnrB" onclick="iFun()">more info</span>
+    <label for="ckFun" class="pnt"><span class="cnrB">Functional</span>
+      <input type="checkbox"
+      class="pnt"
+      id="ckFun"
+      name="ckFun">
+      <span class="chFun pnt"></span>
+    </label>
+  </fieldset>
+  <div id="fun-d">
+    These cookies enable the site to provide enhanced functionality and
+    personalization.
+  </div>
+  <fieldset>
+    <span id="tar-i" class="cnrB" onclick="iTar()">more info</span>
+    <label for="ckTar" class="pnt"><span class="cnrB">Targeting</span>
+      <input type="checkbox"
+      class="pnt"
+      id="ckTar"
+      name="ckTar">
+      <span class="chTar pnt"></span>
+    </label>
+  </fieldset>
+  <div id="tar-d">
+    These cookies optimize advertisements.
+  </div>
+  <fieldset>
+    <button class="cnl"
+    type="reset"
+    onclick="clk2()">
+      Cancel
+    </button>
+    <button class="acp" type="submit">
+      Confirm
+    </button>
+  </fieldset>
+</form>
+
