@@ -46,7 +46,7 @@ function iTar() {
 
 // I. Toggle user theme selection
 // (1) Check theme (if user previously selected theme) and set selection
-// (2) Default to light theme if not, otherwise default to dark
+// (2) If not then default to light theme, otherwise default to dark
 // (3) Toggle theme on user selection
 // (4) Set theme cookie to persist selection
 
@@ -75,29 +75,52 @@ if (thmS == 'dark') {
   document.getElementById('thm').innerHTML = 'm o o n l i g h t';
 }
 
-// Toggle on click and set theme cookie accordingly
+// Toggle theme on click and set cookie accordingly
 thm.addEventListener('click', () => {
+
+  // (1) Toggle theme
+  // (2) Set selected theme cookie
+
+  // Match media query for dark theme
   const dark = window.matchMedia('screen and (prefers-color-scheme: dark)');
+
   if (dark.matches) {
+
+    // If dark and user clicks then:
+    // (1) Change css to light
+    // (2) Set light cookie
+    // (3) Set theme icon to dark (to switch back to dark from light)
+
     document.body.classList.toggle('light-theme');
     var theme = document.body.classList.contains('light-theme')
       ? 'light'
       : 'dark';
+
     var thmIcn = document.body.classList.contains('light-theme')
       ? 'm o o n l i g h t'
       : 's u n s h i n e';
+
     document.getElementById('thm').innerHTML = thmIcn;
+
   } else {
+
+    // If light and user clicks then:
+    // (1) Change css to dark
+    // (2) Set dark cookie
+    // (3) Set theme icon to light (to switch back to light from dark)
+
     document.body.classList.toggle('dark-theme');
     var theme = document.body.classList.contains('dark-theme')
       ? 'dark'
       : 'light';
+
     var thmIcn = document.body.classList.contains('dark-theme')
       ? 's u n s h i n e'
       : 'm o o n l i g h t';
+
     document.getElementById('thm').innerHTML = thmIcn;
   }
-  // Use local storage to persist theme
+
   localStorage.setItem('theme', theme);
 });
 
@@ -127,7 +150,6 @@ if (ckNec != 'ckNecY') {
 
   document.getElementById('ntc').style.display = 'none';
   thmP.append(thm);
-
 }
 
 // Develop as needed...
@@ -158,14 +180,8 @@ function sbm1() {
     'ckTarY'
   );
 
-  localStorage.setItem(
-    'theme',
-    'dark'
-  );
-
   thmP.append(thm); // add thm toggle
   location.reload(false); // reload page
-
 }
 
 // Confirm cookie choices (form submit)
@@ -202,11 +218,4 @@ function sbm2() {
     'ckNec?',
     'ckNecY'
   );
-
-  // Set dark default
-  localStorage.setItem(
-    'theme',
-    'dark'
-  );
-
 }
