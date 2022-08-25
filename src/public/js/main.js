@@ -121,7 +121,10 @@ thm.addEventListener('click', () => {
     document.getElementById('thm').innerHTML = thmIcn;
   }
 
-  localStorage.setItem('theme', theme);
+  localStorage.setItem(
+    'theme',
+    theme
+  );
 });
 
 // II. Accept cookies
@@ -180,6 +183,11 @@ function sbm1() {
     'ckTarY'
   );
 
+  localStorage.setItem(
+    'theme',
+    'dark'
+  );
+
   thmP.append(thm); // add thm toggle
   location.reload(false); // reload page
 }
@@ -218,4 +226,33 @@ function sbm2() {
     'ckNec?',
     'ckNecY'
   );
+
+  // Set dark default
+  localStorage.setItem(
+    'theme',
+    'dark'
+  );
+}
+
+// Scroll to top -------------------------------------------------------------/
+const scr = document.getElementById("scr-btn");
+
+function scrollToTop() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+window.onscroll = () => { scrollFunction(); }; // on scroll
+
+// Show scroll-to-top button
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 || document.documentElement.scrollTop > 20
+  ) {
+    scr.style.opacity = "1";
+    scr.style.cursor = "pointer";
+  } else {
+    scr.style.opacity = "0";
+    scr.style.cursor = "default";
+  }
 }
