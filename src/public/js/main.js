@@ -1,9 +1,9 @@
-// Use this file with index.hbs and main.css / main.scss for completeness
+// Use this main.js with index.hbs and main.css / main.scss
 
 // Change css (I) ------------------------------------------------------------/
 
-// (1) Toggle hamburger menu bars to x and back (#mnu-btn)
-// (2) Toggle menu display (#mnu)
+// (1) Toggle hamburger menu bars to x and back
+// (2) Toggle menu display
 
 function clk1() {
   document.body.classList.toggle('clk1');
@@ -11,8 +11,8 @@ function clk1() {
 
 // Change css (II) -----------------------------------------------------------/
 
-// (1) Toggle policy notice (#ntc)
-// (2) Toggle policy notice form (#frm1)
+// (1) Toggle policy notice
+// (2) Toggle policy notice form 
 
 function clk2() {
   document.body.classList.toggle('clk2');
@@ -243,12 +243,14 @@ function scrUp() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-window.onscroll = () => { scrFunc(); }; // on scroll
+window.onscroll = () => {
+  scrFunc();
+};
 
 // Show scroll-to-top button
 function scrFunc() {
   if (
-    document.body.scrollTop > 20 || document.documentElement.scrollTop > 20
+    document.body.scrollTop > 200 || document.documentElement.scrollTop > 200
   ) {
     scr.style.opacity = "1";
     scr.style.cursor = "pointer";
