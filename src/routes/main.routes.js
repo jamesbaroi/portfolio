@@ -35,9 +35,9 @@ routerMain.get('/sign-in', (req, res) => {
   res.render('signin', { title: 'Sign In' });
 });
 
-// Settings
-routerMain.get('/settings', (req, res) => {
-  res.render('settings', { title: 'Settings' });
+// Privacy
+routerMain.get('/privacy', (req, res) => {
+  res.render('privacy', { title: 'Privacy' });
 });
 
 // Alt -----------------------------------------------------------------------/
