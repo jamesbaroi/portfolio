@@ -66,13 +66,13 @@ const thm = document.getElementById('thm');
 const thmS = localStorage.getItem('theme');
 
 // Set defaults
-if (thmS == 'dark') {
-  document.body.classList.toggle('dark-theme');
-  document.getElementById('thm').innerHTML = 's u n s h i n e';
-} else {
-  // Set light default if no cookies accepted
+if (thmS == 'light') {
   document.body.classList.toggle('light-theme');
   document.getElementById('thm').innerHTML = 'm o o n l i g h t';
+} else {
+  // Set dark default if no cookies accepted
+  document.body.classList.toggle('dark-theme');
+  document.getElementById('thm').innerHTML = 's u n s h i n e';
 }
 
 // Toggle theme on click and set cookie accordingly
@@ -89,13 +89,14 @@ thm.addEventListener('click', () => {
     // If dark and user clicks then:
     // (1) Change css to light
     // (2) Set light cookie
-    // (3) Set theme icon to dark (to switch back to dark from light)
+    // (3) Set theme to dark (to switch back to dark from light)
 
     document.body.classList.toggle('light-theme');
     var theme = document.body.classList.contains('light-theme')
       ? 'light'
       : 'dark';
 
+    // Display theme text
     var thmIcn = document.body.classList.contains('light-theme')
       ? 'm o o n l i g h t'
       : 's u n s h i n e';
@@ -107,7 +108,7 @@ thm.addEventListener('click', () => {
     // If light and user clicks then:
     // (1) Change css to dark
     // (2) Set dark cookie
-    // (3) Set theme icon to light (to switch back to light from dark)
+    // (3) Set theme to light (to switch back to light from dark)
 
     document.body.classList.toggle('dark-theme');
     var theme = document.body.classList.contains('dark-theme')
@@ -237,15 +238,15 @@ function sbm2() {
 // Scroll to top -------------------------------------------------------------/
 const scr = document.getElementById("scr-btn");
 
-function scrollToTop() {
+function scrUp() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-window.onscroll = () => { scrollFunction(); }; // on scroll
+window.onscroll = () => { scrFunc(); }; // on scroll
 
 // Show scroll-to-top button
-function scrollFunction() {
+function scrFunc() {
   if (
     document.body.scrollTop > 20 || document.documentElement.scrollTop > 20
   ) {
