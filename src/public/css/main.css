@@ -68,12 +68,13 @@ html, body {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
      -moz-text-size-adjust: 100%;
           text-size-adjust: 100%;
   transition: 0.6s;
-  width: 100%;
+  width: 100vw;
 }
 
 body {
@@ -99,6 +100,7 @@ body {
   right: 0;
   left: 0;
   transition: 0.6s;
+  width: 100vw;
   z-index: 3;
 }
 
@@ -109,6 +111,7 @@ body {
   margin-bottom: 100vh;
   margin-top: 56px;
   transition: 0.6s;
+  width: 100vw;
 }
 
 .clk1 #b1 {
@@ -410,9 +413,8 @@ body {
   display: grid;
   padding-bottom: 95vh;
 }
-#mnu a,
+#mnu .lnk,
 #mnu #thm {
-  border-bottom: 0.1px solid var(--c2);
   color: var(--c3);
   display: block;
   font-size: 0.8em;
@@ -421,7 +423,10 @@ body {
   text-align: right;
   transition: 0.6s;
 }
-#mnu #thm {
+#mnu .lnk {
+  border-bottom: 0.1px solid var(--c2);
+}
+#mnu #thm, #mnu #thmP {
   border: none;
 }
 
@@ -431,7 +436,7 @@ body {
 }
 
 @media (hover: hover) {
-  #mnu a:hover {
+  #mnu .lnk:hover {
     border-bottom: 0.1px solid var(--c3);
     color: var(--c4);
     cursor: pointer;
@@ -555,29 +560,23 @@ body {
 }
 @-webkit-keyframes ani-thm {
   0% {
-    border-bottom: 0.1px solid var(--c1);
     color: var(--c3);
   }
   60% {
-    border-bottom: 0.1px solid var(--c2);
     color: var(--c3);
   }
   72% {
-    border-bottom: 0.1px solid var(--c1);
     color: var(--c4);
   }
 }
 @keyframes ani-thm {
   0% {
-    border-bottom: 0.1px solid var(--c1);
     color: var(--c3);
   }
   60% {
-    border-bottom: 0.1px solid var(--c2);
     color: var(--c3);
   }
   72% {
-    border-bottom: 0.1px solid var(--c1);
     color: var(--c4);
   }
 }
@@ -586,7 +585,7 @@ body {
   visibility: visible;
   transition: 0.6s;
 }
-.clk1 #mnu a,
+.clk1 #mnu .lnk,
 .clk1 #mnu #thm {
   padding: 10px;
   margin: 10px 0 0;
@@ -773,13 +772,14 @@ body::-webkit-scrollbar-thumb:hover {
     border-radius: 0px;
   }
   .hv5:hover {
-    color: var(--c5);
+    color: var(--c4);
     transition: 0.6s;
   }
 }
 #content {
+  overflow-x: hidden;
   padding: 56px 0 0;
-  width: auto;
+  width: 100vw;
 }
 
 #me {
@@ -841,4 +841,24 @@ body::-webkit-scrollbar-thumb:hover {
 
 .clk1 #me, .clk1 .content {
   width: 66vw;
+}
+
+#portfolio {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+#about {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+#blog {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+#privacy {
+  overflow-x: hidden;
+  width: 100vw;
 }

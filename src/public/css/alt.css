@@ -27,12 +27,13 @@ html, body {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
      -moz-text-size-adjust: 100%;
           text-size-adjust: 100%;
   transition: 0.6s;
-  width: 100%;
+  width: 100vw;
 }
 
 body {
@@ -58,6 +59,7 @@ body {
   right: 0;
   left: 0;
   transition: 0.6s;
+  width: 100vw;
   z-index: 3;
 }
 
@@ -68,6 +70,7 @@ body {
   margin-bottom: 100vh;
   margin-top: 56px;
   transition: 0.6s;
+  width: 100vw;
 }
 
 .clk1 #b1 {
@@ -212,7 +215,7 @@ body::-webkit-scrollbar-thumb:hover {
     border-radius: 0px;
   }
   .hv5:hover {
-    color: var(--c5);
+    color: var(--c4);
     transition: 0.6s;
   }
 }
