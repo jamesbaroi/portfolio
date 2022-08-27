@@ -5,18 +5,14 @@
 // (1) Toggle hamburger menu bars to x and back
 // (2) Toggle menu display
 
-function clk1() {
-  document.body.classList.toggle('clk1');
-}
+function clk1() { document.body.classList.toggle('clk1'); }
 
 // Change css (II) -----------------------------------------------------------/
 
 // (1) Toggle policy notice
 // (2) Toggle policy notice form 
 
-function clk2() {
-  document.body.classList.toggle('clk2');
-}
+function clk2() { document.body.classList.toggle('clk2'); }
 
 // Change css (III) ----------------------------------------------------------/
 
@@ -25,21 +21,10 @@ function clk2() {
 // (3) Toggle functional cookie select
 // (4) Toggle targeting cookie select
 
-function iNec() {
-  document.body.classList.toggle('clk-iNec');
-}
-
-function iPer() {
-  document.body.classList.toggle('clk-iPer');
-}
-
-function iFun() {
-  document.body.classList.toggle('clk-iFun');
-}
-
-function iTar() {
-  document.body.classList.toggle('clk-iTar');
-}
+function iNec() { document.body.classList.toggle('clk-iNec'); }
+function iPer() { document.body.classList.toggle('clk-iPer'); }
+function iFun() { document.body.classList.toggle('clk-iFun'); }
+function iTar() { document.body.classList.toggle('clk-iTar'); }
 
 // Accept cookies / toggle theme ---------------------------------------------/
 // Consturct these together since theme uses local storage (privacy liability!)
@@ -93,16 +78,10 @@ thm.addEventListener('click', () => {
 
     document.body.classList.toggle('light-theme');
     var theme = document.body.classList.contains('light-theme')
-      ? 'light'
-      : 'dark';
-
-    // Display theme text
+      ? 'light' : 'dark';
     var thmIcn = document.body.classList.contains('light-theme')
-      ? 'm o o n l i g h t'
-      : 's u n s h i n e';
-
+      ? 'm o o n l i g h t' : 's u n s h i n e';
     document.getElementById('thm').innerHTML = thmIcn;
-
   } else {
 
     // If light and user clicks then:
@@ -112,20 +91,13 @@ thm.addEventListener('click', () => {
 
     document.body.classList.toggle('dark-theme');
     var theme = document.body.classList.contains('dark-theme')
-      ? 'dark'
-      : 'light';
-
+      ? 'dark' : 'light';
     var thmIcn = document.body.classList.contains('dark-theme')
-      ? 's u n s h i n e'
-      : 'm o o n l i g h t';
-
+      ? 's u n s h i n e' : 'm o o n l i g h t';
     document.getElementById('thm').innerHTML = thmIcn;
   }
-
-  localStorage.setItem(
-    'theme',
-    theme
-  );
+  // Set theme
+  localStorage.setItem('theme', theme);
 });
 
 // II. Accept cookies
@@ -137,21 +109,17 @@ const ckTar = localStorage.getItem('ckTar?');
 
 // Check user cookies
 if (ckNec != 'ckNecY') {
-
   // User did not set cookie so:
-  // (1) Show cookie notice (user did not accept)
+  // (1) Show cookie notice
   // (2) Hide and remove thm color selection button
-
   document.getElementById('ntc').style.display = 'grid';
   document.getElementById('thm').style.display = 'none';
   thm.remove(); // necessary to prevent dev tool manipulation
 
 } else {
-
   // User set cookies so:
-  // (1) Remove notice (user did accept)
+  // (1) Remove notice
   // (2) Append and show thm color selection button
-
   document.getElementById('ntc').style.display = 'none';
   thmP.append(thm);
 }
@@ -164,31 +132,11 @@ if (ckTar != 'ckTarY') { /* create logic... */ }
 // Accept all cookies
 function sbm1() {
   // Set all cookies
-  localStorage.setItem(
-    'ckNec?',
-    'ckNecY'
-  );
-
-  localStorage.setItem(
-    'ckPer?',
-    'ckPerY'
-  );
-
-  localStorage.setItem(
-    'ckFun?',
-    'ckFunY'
-  );
-
-  localStorage.setItem(
-    'ckTar?',
-    'ckTarY'
-  );
-
-  localStorage.setItem(
-    'theme',
-    'dark'
-  );
-
+  localStorage.setItem('ckNec?', 'ckNecY');
+  localStorage.setItem('ckPer?', 'ckPerY');
+  localStorage.setItem('ckFun?', 'ckFunY');
+  localStorage.setItem('ckTar?', 'ckTarY');
+  localStorage.setItem('theme', 'dark');
   thmP.append(thm); // add thm toggle
   location.reload(false); // reload page
 }
@@ -199,40 +147,14 @@ function sbm2() {
   const ckFPer = document.forms['frm1']['ckPer'].checked;
   const ckFFun = document.forms['frm1']['ckFun'].checked;
   const ckFTar = document.forms['frm1']['ckTar'].checked;
-
   // Set cookies accordingly
-  if (ckFPer) {
-    localStorage.setItem(
-      'ckPer?',
-      'ckPerY'
-    );
-  }
-
-  if (ckFFun) {
-    localStorage.setItem(
-      'ckFun?',
-      'ckFunY'
-    );
-  }
-
-  if (ckFTar) {
-    localStorage.setItem(
-      'ckTar?',
-      'ckTarY'
-    );
-  }
-
+  if (ckFPer) { localStorage.setItem('ckPer?', 'ckPerY'); }
+  if (ckFFun) { localStorage.setItem('ckFun?', 'ckFunY'); }
+  if (ckFTar) { localStorage.setItem('ckTar?', 'ckTarY'); }
   // Unconditional
-  localStorage.setItem(
-    'ckNec?',
-    'ckNecY'
-  );
-
+  localStorage.setItem('ckNec?', 'ckNecY');
   // Set dark default
-  localStorage.setItem(
-    'theme',
-    'dark'
-  );
+  localStorage.setItem('theme', 'dark');
 }
 
 // Scroll to top -------------------------------------------------------------/
@@ -243,9 +165,7 @@ function scrUp() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-window.onscroll = () => {
-  scrFunc();
-};
+window.onscroll = () => { scrFunc(); };
 
 // Show scroll-to-top button
 function scrFunc() {
@@ -264,11 +184,9 @@ function scrFunc() {
 // Single pagination ---------------------------------------------------------/
 
 // (I) Get parent DOM element
-
 const b2 = document.getElementById('b2');
 
 // (II) Get children DOM elements
-
 const content = document.getElementById('content');
 const portfolio = document.getElementById('portfolio');
 const about = document.getElementById('about');
@@ -276,7 +194,6 @@ const blog = document.getElementById('blog');
 const privacy = document.getElementById('privacy');
 
 // (III) Create functions to show each page and hide all else
-
 // (1) Show home
 function shHome() {
   portfolio.remove();
@@ -284,7 +201,7 @@ function shHome() {
   blog.remove();
   privacy.remove();
   b2.append(content);
-  scrUp();
+  scrUp(); // Use scroll up
 } shHome(); // Execute once on load
 
 // (2) Show portfolio
