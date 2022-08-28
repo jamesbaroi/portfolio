@@ -188,8 +188,11 @@ const b2 = document.getElementById('b2');
 
 // (II) Get children DOM elements
 const content = document.getElementById('content');
+const me = document.getElementById('me');
+const portfolio = document.getElementById('portfolio');
 const about = document.getElementById('about');
 const blog = document.getElementById('blog');
+const contact = document.getElementById('contact');
 const privacy = document.getElementById('privacy');
 
 // (III) Create functions to show each page and hide all else
@@ -197,34 +200,64 @@ const privacy = document.getElementById('privacy');
 function shHome() {
   about.remove();
   blog.remove();
+  contact.remove();
   privacy.remove();
+  b2.append(me);
   b2.append(content);
   scrUp(); // Use scroll up
 } shHome(); // Execute once on load
 
-// (2) Show about
+// (2) Show portfolio
+function shPortfolio() {
+  me.remove();
+  about.remove();
+  blog.remove();
+  contact.remove();
+  privacy.remove();
+  b2.append(content);
+  scrUp();
+}
+
+// (3) Show about
 function shAbout() {
+  me.remove();
   content.remove();
   blog.remove();
+  contact.remove();
   privacy.remove();
   b2.append(about);
   scrUp();
 }
 
-// (3) Show blog
+// (4) Show blog
 function shBlog() {
+  me.remove();
   content.remove();
   about.remove();
+  contact.remove();
   privacy.remove();
   b2.append(blog);
   scrUp();
 }
 
-// (4) Show privacy
-function shPrivacy() {
+// (5) Show contact
+function shContact() {
+  me.remove();
   content.remove();
   about.remove();
   blog.remove();
+  privacy.remove();
+  b2.append(contact);
+  scrUp();
+}
+
+// (6) Show privacy
+function shPrivacy() {
+  me.remove();
+  content.remove();
+  about.remove();
+  blog.remove();
+  contact.remove();
   b2.append(privacy);
   scrUp();
 }

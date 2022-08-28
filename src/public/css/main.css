@@ -530,7 +530,7 @@ body {
     color: var(--c4);
   }
 }
-@-webkit-keyframes ani-prv {
+@-webkit-keyframes ani-cnt {
   0% {
     border-bottom: 0.1px solid var(--c1);
     color: var(--c3);
@@ -540,6 +540,34 @@ body {
     color: var(--c3);
   }
   60% {
+    border-bottom: 0.1px solid var(--c1);
+    color: var(--c4);
+  }
+}
+@keyframes ani-cnt {
+  0% {
+    border-bottom: 0.1px solid var(--c1);
+    color: var(--c3);
+  }
+  48% {
+    border-bottom: 0.1px solid var(--c2);
+    color: var(--c3);
+  }
+  60% {
+    border-bottom: 0.1px solid var(--c1);
+    color: var(--c4);
+  }
+}
+@-webkit-keyframes ani-prv {
+  0% {
+    border-bottom: 0.1px solid var(--c1);
+    color: var(--c3);
+  }
+  60% {
+    border-bottom: 0.1px solid var(--c2);
+    color: var(--c3);
+  }
+  72% {
     border-bottom: 0.1px solid var(--c1);
     color: var(--c4);
   }
@@ -549,11 +577,11 @@ body {
     border-bottom: 0.1px solid var(--c1);
     color: var(--c3);
   }
-  48% {
+  60% {
     border-bottom: 0.1px solid var(--c2);
     color: var(--c3);
   }
-  60% {
+  72% {
     border-bottom: 0.1px solid var(--c1);
     color: var(--c4);
   }
@@ -562,10 +590,10 @@ body {
   0% {
     color: var(--c3);
   }
-  60% {
+  72% {
     color: var(--c3);
   }
-  72% {
+  84% {
     color: var(--c4);
   }
 }
@@ -573,10 +601,10 @@ body {
   0% {
     color: var(--c3);
   }
-  60% {
+  72% {
     color: var(--c3);
   }
-  72% {
+  84% {
     color: var(--c4);
   }
 }
@@ -609,6 +637,14 @@ body {
 .clk1 #mnu #blg-l {
   -webkit-animation: ani-blg;
           animation: ani-blg;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.clk1 #mnu #cnt-l {
+  -webkit-animation: ani-cnt;
+          animation: ani-cnt;
   -webkit-animation-duration: 0.6s;
           animation-duration: 0.6s;
   -webkit-animation-delay: 0.2s;
@@ -796,7 +832,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 #content {
   overflow-x: hidden;
-  padding: 56px 0 0;
+  padding: 0;
   width: 100vw;
 }
 
@@ -855,22 +891,30 @@ body::-webkit-scrollbar-thumb:hover {
   font-size: 0.8em;
   margin: 0 20px 10px;
   padding: 0 10px 10px;
+  transition: 0.6s;
 }
 
 .clk1 #me, .clk1 .content {
   width: 66vw;
 }
 
+@media (hover: hover) {
+  .content .txt:hover {
+    color: var(--c4);
+  }
+}
 .projects {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   background-color: var(--c1);
   display: grid;
+  font-size: 0.8em;
   gap: 1em;
   grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
   height: auto;
   overflow-y: auto;
+  margin: 0 30px;
   max-height: 100vh;
   padding: 10px 0;
   transition: 0.6s;
@@ -928,8 +972,8 @@ body::-webkit-scrollbar-thumb:hover {
 .key_06, .key_07, .key_08, .key_09, .key_10 {
   background-color: var(--c1);
   border-radius: 20px;
-  color: var(--c3);
-  padding: 0.2em 1em;
+  color: var(--c4);
+  padding: 0.2em 1em 0.4em;
   transition: 0.6s;
 }
 
@@ -955,7 +999,7 @@ body::-webkit-scrollbar-thumb:hover {
   .proj-link :hover .keywords {
     background-color: var(--c1);
     border-radius: 20px;
-    color: var(--c4);
+    color: var(--c3);
   }
   .proj-link :hover .keys {
     background-color: var(--c1);
@@ -968,12 +1012,6 @@ body::-webkit-scrollbar-thumb:hover {
     color: var(--c5);
   }
 }
-#portfolio {
-  overflow-x: hidden;
-  width: 100vw;
-  transition: 0.6s;
-}
-
 #about {
   overflow-x: hidden;
   width: 100vw;

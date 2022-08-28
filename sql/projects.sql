@@ -43,8 +43,8 @@ VALUES
 ('Periodic Table',
 'Vertically responsive periodic table of the elements. Click on each element
 to view more information.',
-'10.0.0.240',
-'8182',
+'localhost',
+'8081',
 '',
-'CSS', 'SCSS', 'MySQL', 'Science', 'Chemistry', 'Education', 'Resource', '', '', ''
+'CSS', 'SCSS', 'MySQL', 'Science', 'Chemistry', 'Education', '', '', '', ''
 );
