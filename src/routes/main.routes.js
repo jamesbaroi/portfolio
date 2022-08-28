@@ -14,36 +14,6 @@ routerMain.get('/', (req, res) => {
   });
 });
 
-// Portfolio
-routerMain.get('/portfolio', (req, res) => {
-  res.render('portfolio', { title: 'Portfolio' });
-});
-
-// About
-routerMain.get('/about', (req, res) => {
-  res.render('about', { title: 'About' });
-});
-
-// Blog
-routerMain.get('/blog', (req, res) => {
-  res.render('blog', { title: 'Blog' });
-});
-
-// Join
-routerMain.get('/join', (req, res) => {
-  res.render('join', { title: 'Join' });
-});
-
-// Sign in
-routerMain.get('/sign-in', (req, res) => {
-  res.render('signin', { title: 'Sign In' });
-});
-
-// Privacy
-routerMain.get('/privacy', (req, res) => {
-  res.render('privacy', { title: 'Privacy' });
-});
-
 // Alt -----------------------------------------------------------------------/
 
 // Cookie policy
