@@ -179,16 +179,16 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .brd-b {
-  border-bottom: 0.1px solid var(--c7);
+  border-bottom: 0.1px solid var(--c2);
 }
 
 .brd-t {
-  border-top: 0.1px solid var(--c7);
+  border-top: 0.1px solid var(--c2);
 }
 
 .brd-tb {
-  border-bottom: 0.1px solid var(--c7);
-  border-top: 0.1px solid var(--c7);
+  border-bottom: 0.1px solid var(--c2);
+  border-top: 0.1px solid var(--c2);
 }
 
 .hv1 {

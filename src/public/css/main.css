@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, a {
   margin: 0;
   padding: 0;
@@ -736,16 +737,16 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .brd-b {
-  border-bottom: 0.1px solid var(--c7);
+  border-bottom: 0.1px solid var(--c2);
 }
 
 .brd-t {
-  border-top: 0.1px solid var(--c7);
+  border-top: 0.1px solid var(--c2);
 }
 
 .brd-tb {
-  border-bottom: 0.1px solid var(--c7);
-  border-top: 0.1px solid var(--c7);
+  border-bottom: 0.1px solid var(--c2);
+  border-top: 0.1px solid var(--c2);
 }
 
 .hv1 {
@@ -853,9 +854,26 @@ body::-webkit-scrollbar-thumb:hover {
 .content .txt {
   color: var(--c3);
   font-size: 0.8em;
-  margin: 0 20px 10px;
-  padding: 0 10px 10px;
+  margin: 0 20px 0;
+  padding: 0 10px;
   transition: 0.6s;
+}
+.content ul {
+  font-size: 0.8em;
+  margin: 0 20px;
+  padding: 0 10px;
+  list-style: none;
+}
+.content li {
+  color: var(--c3);
+  transition: 0.6s;
+}
+.content li::before {
+  content: "•";
+  color: var(--c5);
+  font-weight: 900;
+  display: inline-block;
+  width: 1em;
 }
 
 .clk1 #me, .clk1 .content {
@@ -867,6 +885,9 @@ body::-webkit-scrollbar-thumb:hover {
     color: var(--c3);
   }
   .content:hover .txt {
+    color: var(--c4);
+  }
+  li:hover {
     color: var(--c4);
   }
 }
@@ -892,7 +913,7 @@ body::-webkit-scrollbar-thumb:hover {
      -moz-appearance: none;
           appearance: none;
   background-color: var(--c2);
-  border-radius: 10px;
+  border-radius: 4px;
   height: 100%;
   transition: 0.6s;
 }
@@ -953,7 +974,7 @@ body::-webkit-scrollbar-thumb:hover {
 @media (hover: hover) {
   .proj-link :hover {
     background-color: var(--c1);
-    border-radius: 10px;
+    border-radius: 4px;
   }
   .proj-link :hover .name {
     color: var(--c3);
