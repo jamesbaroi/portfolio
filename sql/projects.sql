@@ -39,25 +39,12 @@ _key_09,
 _key_10
 )
 VALUES
-('Portfolio', 
-'Portfolio of a web developer seeking work. Click on projects to explore.',
-'10.0.0.240',
-'8080',
-'',
-'Node.js', 'Express.js', 'MySQL', 'Recursive', '', '', '', '', '', ''
-),
-('Blog Site',
-'To share stories with the world.',
-'10.0.0.240',
-'8181',
-'',
-'', '', '', '', '', '', '', '', '', ''
-),
+
 ('Periodic Table',
 'Vertically responsive periodic table of the elements. Click on each element
 to view more information.',
 '10.0.0.240',
 '8182',
 '',
-'CSS', 'SCSS', '', '', '', '', '', '', '', ''
+'CSS', 'SCSS', 'MySQL', 'Science', 'Chemistry', 'Education', 'Resource', '', '', ''
 );

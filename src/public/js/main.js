@@ -188,7 +188,6 @@ const b2 = document.getElementById('b2');
 
 // (II) Get children DOM elements
 const content = document.getElementById('content');
-const portfolio = document.getElementById('portfolio');
 const about = document.getElementById('about');
 const blog = document.getElementById('blog');
 const privacy = document.getElementById('privacy');
@@ -196,7 +195,6 @@ const privacy = document.getElementById('privacy');
 // (III) Create functions to show each page and hide all else
 // (1) Show home
 function shHome() {
-  portfolio.remove();
   about.remove();
   blog.remove();
   privacy.remove();
@@ -204,20 +202,9 @@ function shHome() {
   scrUp(); // Use scroll up
 } shHome(); // Execute once on load
 
-// (2) Show portfolio
-function shPortfolio() {
-  content.remove();
-  about.remove();
-  blog.remove();
-  privacy.remove();
-  b2.append(portfolio);
-  scrUp();
-}
-
 // (2) Show about
 function shAbout() {
   content.remove();
-  portfolio.remove();
   blog.remove();
   privacy.remove();
   b2.append(about);
@@ -227,7 +214,6 @@ function shAbout() {
 // (3) Show blog
 function shBlog() {
   content.remove();
-  portfolio.remove();
   about.remove();
   privacy.remove();
   b2.append(blog);
@@ -237,7 +223,6 @@ function shBlog() {
 // (4) Show privacy
 function shPrivacy() {
   content.remove();
-  portfolio.remove();
   about.remove();
   blog.remove();
   b2.append(privacy);
