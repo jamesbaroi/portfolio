@@ -191,15 +191,13 @@ const content = document.getElementById('content');
 const me = document.getElementById('me');
 const portfolio = document.getElementById('portfolio');
 const about = document.getElementById('about');
-const blog = document.getElementById('blog');
 const contact = document.getElementById('contact');
-const privacy = document.getElementById('privacy');
+const privacy = document.getElementById('legal');
 
 // (III) Create functions to show each page and hide all else
 // (1) Show home
 function shHome() {
   about.remove();
-  blog.remove();
   contact.remove();
   privacy.remove();
   b2.append(me);
@@ -211,7 +209,6 @@ function shHome() {
 function shPortfolio() {
   me.remove();
   about.remove();
-  blog.remove();
   contact.remove();
   privacy.remove();
   b2.append(content);
@@ -222,41 +219,28 @@ function shPortfolio() {
 function shAbout() {
   me.remove();
   content.remove();
-  blog.remove();
   contact.remove();
   privacy.remove();
   b2.append(about);
   scrUp();
 }
 
-// (4) Show blog
-function shBlog() {
-  me.remove();
-  content.remove();
-  about.remove();
-  contact.remove();
-  privacy.remove();
-  b2.append(blog);
-  scrUp();
-}
 
-// (5) Show contact
+// (4) Show contact
 function shContact() {
   me.remove();
   content.remove();
   about.remove();
-  blog.remove();
   privacy.remove();
   b2.append(contact);
   scrUp();
 }
 
-// (6) Show privacy
-function shPrivacy() {
+// (5) Show legal
+function shLegal() {
   me.remove();
   content.remove();
   about.remove();
-  blog.remove();
   contact.remove();
   b2.append(privacy);
   scrUp();

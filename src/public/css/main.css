@@ -502,44 +502,16 @@ body {
     color: var(--c4);
   }
 }
-@-webkit-keyframes ani-blg {
-  0% {
-    border-bottom: 0.1px solid var(--c1);
-    color: var(--c3);
-  }
-  36% {
-    border-bottom: 0.1px solid var(--c2);
-    color: var(--c3);
-  }
-  48% {
-    border-bottom: 0.1px solid var(--c1);
-    color: var(--c4);
-  }
-}
-@keyframes ani-blg {
-  0% {
-    border-bottom: 0.1px solid var(--c1);
-    color: var(--c3);
-  }
-  36% {
-    border-bottom: 0.1px solid var(--c2);
-    color: var(--c3);
-  }
-  48% {
-    border-bottom: 0.1px solid var(--c1);
-    color: var(--c4);
-  }
-}
 @-webkit-keyframes ani-cnt {
   0% {
     border-bottom: 0.1px solid var(--c1);
     color: var(--c3);
   }
-  48% {
+  36% {
     border-bottom: 0.1px solid var(--c2);
     color: var(--c3);
   }
-  60% {
+  48% {
     border-bottom: 0.1px solid var(--c1);
     color: var(--c4);
   }
@@ -549,11 +521,11 @@ body {
     border-bottom: 0.1px solid var(--c1);
     color: var(--c3);
   }
-  48% {
+  36% {
     border-bottom: 0.1px solid var(--c2);
     color: var(--c3);
   }
-  60% {
+  48% {
     border-bottom: 0.1px solid var(--c1);
     color: var(--c4);
   }
@@ -563,11 +535,11 @@ body {
     border-bottom: 0.1px solid var(--c1);
     color: var(--c3);
   }
-  60% {
+  48% {
     border-bottom: 0.1px solid var(--c2);
     color: var(--c3);
   }
-  72% {
+  60% {
     border-bottom: 0.1px solid var(--c1);
     color: var(--c4);
   }
@@ -577,11 +549,11 @@ body {
     border-bottom: 0.1px solid var(--c1);
     color: var(--c3);
   }
-  60% {
+  48% {
     border-bottom: 0.1px solid var(--c2);
     color: var(--c3);
   }
-  72% {
+  60% {
     border-bottom: 0.1px solid var(--c1);
     color: var(--c4);
   }
@@ -590,10 +562,10 @@ body {
   0% {
     color: var(--c3);
   }
-  72% {
+  60% {
     color: var(--c3);
   }
-  84% {
+  72% {
     color: var(--c4);
   }
 }
@@ -601,10 +573,10 @@ body {
   0% {
     color: var(--c3);
   }
-  72% {
+  60% {
     color: var(--c3);
   }
-  84% {
+  72% {
     color: var(--c4);
   }
 }
@@ -629,14 +601,6 @@ body {
 .clk1 #mnu #abt-l {
   -webkit-animation: ani-abt;
           animation: ani-abt;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-.clk1 #mnu #blg-l {
-  -webkit-animation: ani-blg;
-          animation: ani-blg;
   -webkit-animation-duration: 0.6s;
           animation-duration: 0.6s;
   -webkit-animation-delay: 0.2s;
@@ -832,7 +796,6 @@ body::-webkit-scrollbar-thumb:hover {
 }
 #content {
   overflow-x: hidden;
-  padding: 0;
   width: 100vw;
 }
 
@@ -877,14 +840,15 @@ body::-webkit-scrollbar-thumb:hover {
 .content {
   background-color: var(--c1);
   display: grid;
-  line-height: 2em;
+  line-height: 1.8em;
   transition: 0.6s;
   width: 100vw;
 }
 .content .tt {
   font-size: 1.2em;
   margin: 10px 20px 0;
-  padding: 10px;
+  padding: 10px 10px 4px;
+  transition: 0.6s;
 }
 .content .txt {
   color: var(--c3);
@@ -899,7 +863,10 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 @media (hover: hover) {
-  .content .txt:hover {
+  .content:hover .tt {
+    color: var(--c3);
+  }
+  .content:hover .txt {
     color: var(--c4);
   }
 }
@@ -1017,7 +984,7 @@ body::-webkit-scrollbar-thumb:hover {
   width: 100vw;
 }
 
-#blog {
+#contact {
   overflow-x: hidden;
   width: 100vw;
 }
