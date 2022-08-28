@@ -44,7 +44,7 @@ VALUES
 'Vertically responsive periodic table of the elements. Click on each element
 to view more information.',
 'localhost',
-'8182',
+'8081',
 '',
 'CSS', 'SCSS', 'MySQL', 'Science', 'Chemistry', 'Education', '', '', '', ''
 );
