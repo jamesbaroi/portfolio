@@ -649,6 +649,24 @@ body::-webkit-scrollbar-thumb:hover {
   background: var(--c5);
 }
 
+.projects::-webkit-scrollbar-thumb {
+  background: var(--c1);
+}
+
+.projects::-webkit-scrollbar-track {
+  background: var(--c1);
+}
+
+.projects::-webkit-scrollbar {
+  display: block;
+  height: auto;
+  width: 10px;
+}
+
+.projects::-webkit-scrollbar-thumb:hover {
+  background: var(--c5);
+}
+
 #scr-btn {
   border-radius: 20px;
   color: var(--c3);
@@ -843,6 +861,105 @@ body::-webkit-scrollbar-thumb:hover {
   width: 66vw;
 }
 
+.projects {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: var(--c1);
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
+  height: auto;
+  overflow-y: auto;
+  max-height: 100vh;
+  padding: 10px 0;
+  transition: 0.6s;
+}
+
+.proj-link {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: var(--c2);
+  border-radius: 10px;
+  height: 100%;
+  transition: 0.6s;
+}
+
+.project {
+  border-radius: 10px;
+  background-color: var(--c2);
+  box-sizing: border-box;
+  height: 100%;
+  padding: 20px 10px;
+  transition: 0.6s;
+}
+
+.name {
+  border-radius: 10px;
+  color: var(--c4);
+  font-weight: 300;
+  padding: 0 10px;
+  text-align: left;
+  transition: 0.6s;
+}
+
+.info {
+  border-radius: 10px;
+  color: var(--c3);
+  padding: 0 10px;
+  text-align: left;
+  transition: 0.6s;
+}
+
+.keywords {
+  color: var(--c3);
+  transition: 0.6s;
+}
+
+.keys {
+  border-radius: 20px;
+  color: var(--c3);
+  padding: 0 10px;
+  transition: 0.6s;
+}
+
+.key_01, .key_02, .key_03, .key_04, .key_05,
+.key_06, .key_07, .key_08, .key_09, .key_10 {
+  background-color: var(--c1);
+  border-radius: 20px;
+  color: var(--c3);
+  padding: 0.2em 1em;
+  transition: 0.6s;
+}
+
+@media screen and (min-width: 620px) {
+  .projects {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+@media (hover: hover) {
+  .proj-link :hover, .projects :hover {
+    background-color: var(--c5);
+    border-radius: 10px;
+  }
+  .proj-link :hover .name, .proj-link :hover .info, .projects :hover .name, .projects :hover .info {
+    color: var(--c1);
+    transition: 0.6s;
+  }
+  .proj-link :hover .keywords, .projects :hover .keywords {
+    color: var(--c1);
+  }
+  .proj-link :hover .keys, .projects :hover .keys {
+    color: var(--c5);
+  }
+  .proj-link :hover .key_01, .proj-link :hover .key_02, .proj-link :hover .key_03, .proj-link :hover .key_04, .proj-link :hover .key_05,
+.proj-link :hover .key_06, .proj-link :hover .key_07, .proj-link :hover .key_08, .proj-link :hover .key_09, .proj-link :hover .key_10, .projects :hover .key_01, .projects :hover .key_02, .projects :hover .key_03, .projects :hover .key_04, .projects :hover .key_05,
+.projects :hover .key_06, .projects :hover .key_07, .projects :hover .key_08, .projects :hover .key_09, .projects :hover .key_10 {
+    border-radius: 20px;
+    color: var(--c5);
+  }
+}
 #portfolio {
   overflow-x: hidden;
   width: 100vw;

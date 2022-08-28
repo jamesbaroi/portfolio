@@ -7,7 +7,11 @@ export const routerMain = express.Router();
 
 // Index
 routerMain.get('/', (req, res) => {
-  res.render('index', { title: 'Home' });
+  const projs = 'SELECT * FROM projects ORDER BY id DESC;';
+  dbConnection.query(projs, (error, results) => {
+    if (error) throw error;
+    res.render('index', { title: 'Home', results: results })
+  });
 });
 
 // Portfolio

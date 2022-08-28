@@ -1,0 +1,25 @@
+<div class="projects">
+  {{#if results}}
+  {{#each results}}
+  <a  class="proj-link"href="http://{{_host}}:{{_port}}" target="_blank">
+    <div class="project">
+      <div class="name">Project #{{id}}. {{_name}}</div>
+      <div class="info">{{_info}}</div>
+      <div class="keys">
+        {{#if _key_01}}<span class="keywords">Keywords: </span>
+                        <span class="key_01">{{_key_01}}</span>{{/if}}
+        {{#if _key_02}}<span class="key_02">{{_key_02}}</span>{{/if}}
+        {{#if _key_03}}<span class="key_03">{{_key_03}}</span>{{/if}}
+        {{#if _key_04}}<span class="key_04">{{_key_04}}</span>{{/if}}
+        {{#if _key_05}}<span class="key_05">{{_key_05}}</span>{{/if}}
+        {{#if _key_06}}<span class="key_06">{{_key_06}}</span>{{/if}}
+        {{#if _key_07}}<span class="key_07">{{_key_07}}</span>{{/if}}
+        {{#if _key_08}}<span class="key_08">{{_key_08}}</span>{{/if}}
+        {{#if _key_09}}<span class="key_09">{{_key_09}}</span>{{/if}}
+        {{#if _key_10}}<span class="key_10">{{_key_10}}</span>{{/if}}
+      </div>
+    </div>
+  </a>
+  {{/each}}
+  {{/if}}
+</div>

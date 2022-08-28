@@ -112,6 +112,24 @@ body::-webkit-scrollbar-thumb:hover {
   background: var(--c5);
 }
 
+.projects::-webkit-scrollbar-thumb {
+  background: var(--c1);
+}
+
+.projects::-webkit-scrollbar-track {
+  background: var(--c1);
+}
+
+.projects::-webkit-scrollbar {
+  display: block;
+  height: auto;
+  width: 10px;
+}
+
+.projects::-webkit-scrollbar-thumb:hover {
+  background: var(--c5);
+}
+
 .h1 {
   color: var(--c4);
   font-size: 1.2em;
