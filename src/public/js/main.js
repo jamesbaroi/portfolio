@@ -141,20 +141,52 @@ function sbm1() {
   location.reload(false); // reload page
 }
 
-// Confirm cookie choices (form submit)
+// Confirm cookie choices 1 cookie notice (form submit)
 function sbm2() {
   // Get form data
+  const ckFNec = document.forms['frm1']['ckNec'].checked;
   const ckFPer = document.forms['frm1']['ckPer'].checked;
   const ckFFun = document.forms['frm1']['ckFun'].checked;
   const ckFTar = document.forms['frm1']['ckTar'].checked;
   // Set cookies accordingly
+  if (ckFNec) {
+    localStorage.setItem('ckNec?', 'ckNecY');
+    localStorage.setItem('theme', 'dark'); // set dark default
+  }
   if (ckFPer) { localStorage.setItem('ckPer?', 'ckPerY'); }
   if (ckFFun) { localStorage.setItem('ckFun?', 'ckFunY'); }
   if (ckFTar) { localStorage.setItem('ckTar?', 'ckTarY'); }
-  // Unconditional
-  localStorage.setItem('ckNec?', 'ckNecY');
-  // Set dark default
-  localStorage.setItem('theme', 'dark');
+}
+
+// Confirm cookie choices 2 (form submit)
+function sbm3() {
+  // Get form data
+  const ckFNec = document.forms['frm2']['ckNec'].checked;
+  const ckFPer = document.forms['frm2']['ckPer'].checked;
+  const ckFFun = document.forms['frm2']['ckFun'].checked;
+  const ckFTar = document.forms['frm2']['ckTar'].checked;
+  // Set cookies accordingly
+  if (ckFNec) {
+    localStorage.setItem('ckNec?', 'ckNecY');
+  } else {
+    localStorage.clear(); // clear all cookies if nec cookies unaccepted
+    location.reload(false); // reload page
+  }
+  if (ckFPer) {
+    localStorage.setItem('ckPer?', 'ckPerY');
+  } else {
+    localStorage.removeItem('ckPer?');
+  }
+  if (ckFFun) {
+    localStorage.setItem('ckFun?', 'ckFunY');
+  } else {
+    localStorage.removeItem('ckFun?');
+  }
+  if (ckFTar) {
+    localStorage.setItem('ckTar?', 'ckTarY');
+  } else {
+    localStorage.removeItem('ckTar?');
+  }
 }
 
 // Scroll to top -------------------------------------------------------------/

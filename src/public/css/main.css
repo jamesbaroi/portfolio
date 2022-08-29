@@ -207,11 +207,11 @@ body {
     color: var(--c5);
   }
 }
-#frm1 {
+#frm1, #frm2 {
   display: none;
   padding: 10px;
 }
-#frm1 fieldset {
+#frm1 fieldset, #frm2 fieldset {
   border-bottom: none;
   border-left: none;
   border-right: none;
@@ -222,26 +222,29 @@ body {
   margin: 10px 10px 0;
   padding: 10px 0;
 }
-#frm1 label {
+#frm1 label, #frm2 label {
   display: flex;
   justify-content: space-between;
 }
-#frm1 legend {
+#frm1 legend, #frm2 legend {
   color: var(--c3);
   padding: 10px 10px 0;
 }
-#frm1 .lg {
+#frm1 .lg, #frm2 .lg {
   color: var(--c4);
   margin: auto;
 }
-#frm1 .cnl {
+#frm1 .cnl, #frm2 .cnl {
   background-color: var(--c2);
   color: var(--c3);
 }
 #frm1 #nec-i,
 #frm1 #per-i,
 #frm1 #fun-i,
-#frm1 #tar-i {
+#frm1 #tar-i, #frm2 #nec-i,
+#frm2 #per-i,
+#frm2 #fun-i,
+#frm2 #tar-i {
   background-color: var(--c2);
   border-radius: 20px;
   color: var(--c3);
@@ -250,71 +253,105 @@ body {
   padding: 0 1em;
   transition: 0.6s;
 }
-#frm1 input[type=checkbox] {
+#frm1 #nec-i::after, #frm2 #nec-i::after {
+  content: "more info";
+}
+#frm1 #per-i::after, #frm2 #per-i::after {
+  content: "more info";
+}
+#frm1 #fun-i::after, #frm2 #fun-i::after {
+  content: "more info";
+}
+#frm1 #tar-i::after, #frm2 #tar-i::after {
+  content: "more info";
+}
+#frm1 input[type=checkbox], #frm2 input[type=checkbox] {
   visibility: collapse;
 }
 #frm1 .chNec,
 #frm1 .chPer,
 #frm1 .chFun,
-#frm1 .chTar {
+#frm1 .chTar, #frm2 .chNec,
+#frm2 .chPer,
+#frm2 .chFun,
+#frm2 .chTar {
   background-color: var(--c2);
   padding: 1em;
   transition: 0.6s;
 }
-#frm1 #ckNec:checked ~ .chNec {
+#frm1 #ckNec:checked ~ .chNec, #frm2 #ckNec:checked ~ .chNec {
   background-color: var(--c5);
   border-radius: 50%;
 }
-#frm1 #ckPer:checked ~ .chPer {
+#frm1 #ckPer:checked ~ .chPer, #frm2 #ckPer:checked ~ .chPer {
   background-color: var(--c5);
   border-radius: 50%;
 }
-#frm1 #ckFun:checked ~ .chFun {
+#frm1 #ckFun:checked ~ .chFun, #frm2 #ckFun:checked ~ .chFun {
   background-color: var(--c5);
   border-radius: 50%;
 }
-#frm1 #ckTar:checked ~ .chTar {
+#frm1 #ckTar:checked ~ .chTar, #frm2 #ckTar:checked ~ .chTar {
   background-color: var(--c5);
   border-radius: 50%;
 }
 #frm1 #nec-d,
 #frm1 #per-d,
 #frm1 #fun-d,
-#frm1 #tar-d {
+#frm1 #tar-d, #frm2 #nec-d,
+#frm2 #per-d,
+#frm2 #fun-d,
+#frm2 #tar-d {
   display: none;
   padding: 0 20px 10px;
   transition: 0.6s;
 }
 
-.clk-iNec #frm1 #nec-i {
+.clk-iNec #frm1 #nec-i, .clk-iNec #frm2 #nec-i {
   background-color: var(--c5);
   color: var(--c1);
+  content: none;
 }
-.clk-iNec #frm1 #nec-d {
+.clk-iNec #frm1 #nec-i::after, .clk-iNec #frm2 #nec-i::after {
+  content: "less info";
+}
+.clk-iNec #frm1 #nec-d, .clk-iNec #frm2 #nec-d {
   display: block;
 }
 
-.clk-iPer #frm1 #per-i {
+.clk-iPer #frm1 #per-i, .clk-iPer #frm2 #per-i {
   background-color: var(--c5);
   color: var(--c1);
+  content: none;
 }
-.clk-iPer #frm1 #per-d {
+.clk-iPer #frm1 #per-i::after, .clk-iPer #frm2 #per-i::after {
+  content: "less info";
+}
+.clk-iPer #frm1 #per-d, .clk-iPer #frm2 #per-d {
   display: block;
 }
 
-.clk-iFun #frm1 #fun-i {
+.clk-iFun #frm1 #fun-i, .clk-iFun #frm2 #fun-i {
   background-color: var(--c5);
   color: var(--c1);
+  content: none;
 }
-.clk-iFun #frm1 #fun-d {
+.clk-iFun #frm1 #fun-i::after, .clk-iFun #frm2 #fun-i::after {
+  content: "less info";
+}
+.clk-iFun #frm1 #fun-d, .clk-iFun #frm2 #fun-d {
   display: block;
 }
 
-.clk-iTar #frm1 #tar-i {
+.clk-iTar #frm1 #tar-i, .clk-iTar #frm2 #tar-i {
   background-color: var(--c5);
   color: var(--c1);
+  content: none;
 }
-.clk-iTar #frm1 #tar-d {
+.clk-iTar #frm1 #tar-i::after, .clk-iTar #frm2 #tar-i::after {
+  content: "less info";
+}
+.clk-iTar #frm1 #tar-d, .clk-iTar #frm2 #tar-d {
   display: block;
 }
 
@@ -322,20 +359,25 @@ body {
   #frm1 #nec-i:hover,
 #frm1 #per-i:hover,
 #frm1 #fun-i:hover,
-#frm1 #tar-i:hover {
+#frm1 #tar-i:hover, #frm2 #nec-i:hover,
+#frm2 #per-i:hover,
+#frm2 #fun-i:hover,
+#frm2 #tar-i:hover {
     background-color: var(--c5);
     color: var(--c1);
   }
   #frm1 .chPer:hover,
 #frm1 .chFun:hover,
-#frm1 .chTar:hover {
+#frm1 .chTar:hover, #frm2 .chPer:hover,
+#frm2 .chFun:hover,
+#frm2 .chTar:hover {
     background-color: var(--c5);
   }
-  #frm1 .cnl:hover {
+  #frm1 .cnl:hover, #frm2 .cnl:hover {
     background-color: var(--c3);
     color: var(--c4);
   }
-  #frm1 .cnl:active {
+  #frm1 .cnl:active, #frm2 .cnl:active {
     background-color: var(--c1);
     color: var(--c5);
   }
@@ -1013,4 +1055,23 @@ body::-webkit-scrollbar-thumb:hover {
 #privacy {
   overflow-x: hidden;
   width: 100vw;
+}
+
+#frm2 {
+  display: block;
+  padding: 0;
+}
+#frm2 .acp,
+#frm2 .cnl {
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+#frm2 .acp {
+  background-color: var(--c5);
+  color: var(--c1);
 }
