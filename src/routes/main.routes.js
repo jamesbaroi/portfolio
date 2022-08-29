@@ -10,7 +10,7 @@ routerMain.get('/', (req, res) => {
   const projs = 'SELECT * FROM projects ORDER BY id DESC;';
   dbConnection.query(projs, (error, results) => {
     if (error) throw error;
-    res.render('index', { title: 'Home', results: results })
+    res.render('index', { title: 'Home', results: results });
   });
 });
 
