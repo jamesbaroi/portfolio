@@ -918,10 +918,6 @@ body::-webkit-scrollbar-thumb:hover {
   width: 1em;
 }
 
-.clk1 #me, .clk1 .content {
-  width: 66vw;
-}
-
 @media (hover: hover) {
   .content:hover .tt {
     color: var(--c3);
