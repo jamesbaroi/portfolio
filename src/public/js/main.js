@@ -26,6 +26,21 @@ function iPer() { document.body.classList.toggle('clk-iPer'); }
 function iFun() { document.body.classList.toggle('clk-iFun'); }
 function iTar() { document.body.classList.toggle('clk-iTar'); }
 
+// Single pagination (constants) ---------------------------------------------/
+
+//  Place constants before accept cookies and functions after accept cookies
+
+// (I) Get parent DOM element
+const b2 = document.getElementById('b2');
+
+// (II) Get children DOM elements
+const content = document.getElementById('content');
+const me = document.getElementById('me');
+const portfolio = document.getElementById('portfolio');
+const about = document.getElementById('about');
+const contact = document.getElementById('contact');
+const privacy = document.getElementById('legal');
+
 // Accept cookies / toggle theme ---------------------------------------------/
 // Consturct these together since theme uses local storage (privacy liability!)
 
@@ -112,22 +127,43 @@ if (ckNec != 'ckNecY') {
   // User did not set cookie so:
   // (1) Show cookie notice
   // (2) Hide and remove thm color selection button
+  // (3) Pass cookie status back to form control (unchecked)
   document.getElementById('ntc').style.display = 'grid';
   document.getElementById('thm').style.display = 'none';
+  document.getElementById('ckNec').checked = false;
   thm.remove(); // necessary to prevent dev tool manipulation
 
 } else {
   // User set cookies so:
   // (1) Remove notice
   // (2) Append and show thm color selection button
+  // (3) Pass cookie status back to form control (checked)
   document.getElementById('ntc').style.display = 'none';
+  document.getElementById('ckNec').checked = true;
   thmP.append(thm);
 }
 
-// Develop as needed...
-if (ckPer != 'ckPerY') { /* create logic... */ }
-if (ckFun != 'ckFunY') { /* create logic... */ }
-if (ckTar != 'ckTarY') { /* create logic... */ }
+// Develop as needed for each cookie type...
+// Performance
+if (ckPer != 'ckPerY') {
+  document.getElementById('ckPer').checked = false;
+} else {
+  document.getElementById('ckPer').checked = true;
+}
+
+// Functional
+if (ckFun != 'ckFunY') {
+  document.getElementById('ckFun').checked = false;
+} else {
+  document.getElementById('ckFun').checked = true;
+}
+
+// Targeting
+if (ckTar != 'ckTarY') {
+  document.getElementById('ckTar').checked = false;
+} else {
+  document.getElementById('ckTar').checked = true;
+}
 
 // Accept all cookies
 function sbm1() {
@@ -153,12 +189,24 @@ function sbm2() {
     localStorage.setItem('ckNec?', 'ckNecY');
     localStorage.setItem('theme', 'dark'); // set dark default
   }
-  if (ckFPer) { localStorage.setItem('ckPer?', 'ckPerY'); }
-  if (ckFFun) { localStorage.setItem('ckFun?', 'ckFunY'); }
-  if (ckFTar) { localStorage.setItem('ckTar?', 'ckTarY'); }
+  if (ckFPer) {
+    localStorage.setItem('ckPer?', 'ckPerY');
+    localStorage.setItem('ckNec?', 'ckNecY');
+    localStorage.setItem('theme', 'dark');
+  }
+  if (ckFFun) {
+    localStorage.setItem('ckFun?', 'ckFunY');
+    localStorage.setItem('ckNec?', 'ckNecY');
+    localStorage.setItem('theme', 'dark');
+  }
+  if (ckFTar) {
+    localStorage.setItem('ckTar?', 'ckTarY');
+    localStorage.setItem('ckNec?', 'ckNecY');
+    localStorage.setItem('theme', 'dark');
+  }
 }
 
-// Confirm cookie choices 2 (form submit)
+// Confirm cookie choices 2 privacy control (form submit)
 function sbm3() {
   // Get form data
   const ckFNec = document.forms['frm2']['ckNec'].checked;
@@ -168,25 +216,38 @@ function sbm3() {
   // Set cookies accordingly
   if (ckFNec) {
     localStorage.setItem('ckNec?', 'ckNecY');
+    localStorage.setItem('theme', 'dark');
   } else {
-    localStorage.clear(); // clear all cookies if nec cookies unaccepted
+    localStorage.clear(); // clear all cookies if nec cookies deselected
     location.reload(false); // reload page
   }
   if (ckFPer) {
     localStorage.setItem('ckPer?', 'ckPerY');
+    localStorage.setItem('ckNec?', 'ckNecY');
+    localStorage.setItem('theme', 'dark');
   } else {
     localStorage.removeItem('ckPer?');
   }
   if (ckFFun) {
     localStorage.setItem('ckFun?', 'ckFunY');
+    localStorage.setItem('ckNec?', 'ckNecY');
+    localStorage.setItem('theme', 'dark');
   } else {
     localStorage.removeItem('ckFun?');
   }
   if (ckFTar) {
     localStorage.setItem('ckTar?', 'ckTarY');
+    localStorage.setItem('ckNec?', 'ckNecY');
+    localStorage.setItem('theme', 'dark');
   } else {
     localStorage.removeItem('ckTar?');
   }
+  me.remove();
+  content.remove();
+  about.remove();
+  contact.remove();
+  b2.append(privacy);
+  scrUp();
 }
 
 // Scroll to top -------------------------------------------------------------/
@@ -213,19 +274,7 @@ function scrFunc() {
   }
 }
 
-// Single pagination ---------------------------------------------------------/
-
-// (I) Get parent DOM element
-const b2 = document.getElementById('b2');
-
-// (II) Get children DOM elements
-const content = document.getElementById('content');
-const me = document.getElementById('me');
-const portfolio = document.getElementById('portfolio');
-const about = document.getElementById('about');
-const contact = document.getElementById('contact');
-const privacy = document.getElementById('legal');
-
+// Single pagination (functions) ---------------------------------------------/
 // (III) Create functions to show each page and hide all else
 // (1) Show home
 function shHome() {
