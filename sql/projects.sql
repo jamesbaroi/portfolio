@@ -47,5 +47,5 @@ full screen.',
 'localhost',
 '8081',
 '',
-'Front-end','Javascript', 'Canvas', '', '', '', '', '', '', ''
+'Game', 'Front-end','Javascript', 'Canvas', '', '', '', '', '', ''
 );
