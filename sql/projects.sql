@@ -41,11 +41,11 @@ _key_10
 VALUES
 
 ('Fatty Mouse',
-'Avoid traps, get the cheese, and survive. Use arrow keys to move, space to
-brake, and "q" to hard brake. Press "g" to restart game and F11 to toggle
-full screen.',
+'Avoid hoomans, collect cheese, survive and reach home. Use arrow keys to move,
+space to brake, and "q" to hard brake. Press "w" to leave droppings after a
+meal and eliminate hoomans.',
 'localhost',
 '8081',
 '',
-'Game', 'Front-end','Javascript', 'Canvas', '', '', '', '', '', ''
+'PC Game', 'Front-end','Javascript', 'Canvas', '', '', '', '', '', ''
 );
