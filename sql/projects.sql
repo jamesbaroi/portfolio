@@ -40,11 +40,10 @@ _key_10
 )
 VALUES
 
-('Periodic Table',
-'Vertically responsive periodic table of the elements. Click on each element
-to view more information.',
+('Obstacle Survival Game',
+'Avoid obstacles, collect gold, and survive. Use arrow keys to move, space to brake, and q to hard brake. Reload to restart.',
 'localhost',
 '8081',
 '',
-'CSS', 'SCSS', 'MySQL', 'Science', 'Chemistry', 'Education', '', '', '', ''
+'Front-end','Javascript', 'HTML5', 'Canvas', '', '', '', '', '', ''
 );
