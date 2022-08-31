@@ -45,5 +45,5 @@ VALUES
 'localhost',
 '8081',
 '',
-'Front-end','Javascript', 'Canvas', 'Desktop Game', '', '', '', '', '', ''
+'Front-end','Javascript', 'Canvas', '', '', '', '', '', '', ''
 );
