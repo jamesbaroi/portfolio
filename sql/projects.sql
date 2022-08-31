@@ -40,8 +40,10 @@ _key_10
 )
 VALUES
 
-('Obstacle Survival Game',
-'Avoid obstacles, collect gold, and survive. Use arrow keys to move, space to brake, and q to hard brake. Reload to restart.',
+('Fatty Mouse',
+'Avoid traps, get the cheese, and survive. Use arrow keys to move, space to
+brake, and "q" to hard brake. Press "g" to restart game and F11 to toggle
+full screen.',
 'localhost',
 '8081',
 '',
