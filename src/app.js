@@ -4,6 +4,9 @@ import hbs from 'express-handlebars';
 import { host, port, nodenv } from './config/env.config.js';
 import { routerMain } from './routes/main.routes.js';
 
+// Create and export server update timestamp
+export var update = '';
+
 // Create express app
 const app = express();
 
@@ -28,4 +31,6 @@ app.use('/', routerMain);
 // Serve app
 app.listen(port || 8080, () => {
   console.log(`Server running in ${nodenv} at http://${host}:${port}`);
+  // Timestamp server start
+  update = new Date;
 });

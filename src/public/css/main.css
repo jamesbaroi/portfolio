@@ -219,8 +219,9 @@ body {
   display: flex;
   gap: 10px;
   justify-content: space-between;
-  margin: 10px 10px 0;
+  margin: 10px 0;
   padding: 10px 0;
+  width: 100%;
 }
 #frm1 label, #frm2 label {
   display: flex;
@@ -742,6 +743,14 @@ body::-webkit-scrollbar-thumb:hover {
   padding: 0 10px;
 }
 
+.bld {
+  font-weight: 500;
+}
+
+.ita {
+  font-style: italic;
+}
+
 .cnr {
   margin: auto;
 }
@@ -772,6 +781,18 @@ body::-webkit-scrollbar-thumb:hover {
 
 .pd10 {
   padding: 10px;
+}
+
+.pd10-b {
+  padding-bottom: 10px;
+}
+
+.pd10-t {
+  padding-top: 10px;
+}
+
+.pd10-tb {
+  padding: 10px 0;
 }
 
 .pd05 {
