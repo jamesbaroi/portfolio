@@ -40,10 +40,10 @@ _key_10
 )
 VALUES
 
-('Fatty Mouse',
-'Avoid hoomans, collect cheese, survive and reach home. Use arrow keys to move,
-space to brake, and "q" to hard brake. Press "w" to leave droppings after a
-meal and eliminate hoomans.',
+('Zombie Asteroids',
+'Kill space zombies, mine gold, and save the princess. Use arrow keys to move,
+space to brake, and "q" to hard brake. Press "w" to drop space mines (requires
+gold).',
 'localhost',
 '8081',
 '',
