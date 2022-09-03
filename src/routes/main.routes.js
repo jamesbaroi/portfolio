@@ -8,7 +8,6 @@ export const routerMain = express.Router();
 
 // Index
 routerMain.get('/', (req, res) => {
-  console.log(req.headers.host);
   const projs = 'SELECT * FROM projects ORDER BY id DESC;';
   dbConnection.query(projs, (error, results) => {
     if (error) throw error;

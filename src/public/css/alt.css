@@ -48,28 +48,18 @@ body {
 #b1 {
   background-color: var(--c1);
   border-bottom: 0.1px solid var(--c1);
-  box-sizing: border-box;
   color: var(--c3);
   font-size: 0.8em;
-  height: 57px;
   justify-content: space-between;
   padding: 20px 10px;
   transition: 0.6s;
   width: 100vw;
-  z-index: 3;
 }
 
 #b2 {
   background-color: var(--c1);
-  display: grid;
-  overflow-x: hidden;
-  margin-bottom: 100vh;
   transition: 0.6s;
   width: 100vw;
-}
-
-.clk1 #b1 {
-  border-bottom: 0.1px solid var(--c2);
 }
 
 #lgl {
@@ -116,42 +106,6 @@ body {
   grid-column: 3;
   margin: 0;
   padding: 10px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: var(--c1);
-}
-
-body::-webkit-scrollbar-track {
-  background: var(--c1);
-}
-
-body::-webkit-scrollbar {
-  display: block;
-  height: auto;
-  width: 10px;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-  background: var(--c5);
-}
-
-.projects::-webkit-scrollbar-thumb {
-  background: var(--c1);
-}
-
-.projects::-webkit-scrollbar-track {
-  background: var(--c1);
-}
-
-.projects::-webkit-scrollbar {
-  display: block;
-  height: auto;
-  width: 10px;
-}
-
-.projects::-webkit-scrollbar-thumb:hover {
-  background: var(--c5);
 }
 
 .h1 {
