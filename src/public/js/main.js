@@ -175,6 +175,7 @@ function sbm1() {
   localStorage.setItem('theme', 'dark');
   thmP.append(thm); // add thm toggle
   location.reload(false); // reload page
+  alert('Your cookie selection has been saved successfully.');
 }
 
 // Confirm cookie choices 1 cookie notice (form submit)
@@ -204,6 +205,7 @@ function sbm2() {
     localStorage.setItem('ckNec?', 'ckNecY');
     localStorage.setItem('theme', 'dark');
   }
+  alert('Your cookie selection has been saved successfully.');
 }
 
 // Confirm cookie choices 2 privacy control (form submit)
@@ -248,6 +250,7 @@ function sbm3() {
   contact.remove();
   b2.append(privacy);
   scrUp();
+  alert('Your cookie selection has been saved successfully.');
 }
 
 // Scroll to top -------------------------------------------------------------/
