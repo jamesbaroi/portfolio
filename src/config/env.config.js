@@ -6,6 +6,7 @@ dotenv.config();
 export const nodenv = process.env.NODE_ENV;
 export const host = process.env.HOST;
 export const port = process.env.PORT;
+export const url = process.env.URL;
 
 // MySQL
 export const db_host = process.env.DB_HOST;
