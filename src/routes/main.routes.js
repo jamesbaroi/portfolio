@@ -1,6 +1,6 @@
 import express from 'express';
 import { dbConnection } from '../config/db.config.js';
-import { host } from '../config/env.config.js';
+import { host, port } from '../config/env.config.js';
 import { update } from '../app.js';
 
 export const routerMain = express.Router();
@@ -24,6 +24,7 @@ routerMain.get('/cookie-policy', (req, res) => {
     layout: 'alt',
     title: 'Cookie Policy',
     host: host,
+    port: port,
     update: update
   });
 });
@@ -34,6 +35,7 @@ routerMain.get('/privacy-policy', (req, res) => {
     layout: 'alt',
     title: 'Privacy Policy',
     host: host,
+    port: port,
     update: update
   });
 });
@@ -44,6 +46,7 @@ routerMain.get('/user-agreement', (req, res) => {
     layout: 'alt',
     title: 'User Agreement',
     host: host,
+    port: port,
     update: update
   });
 });
