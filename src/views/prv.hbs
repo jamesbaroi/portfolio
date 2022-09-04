@@ -2,7 +2,6 @@
 <div id="b2">
   <div id="lgl">
     <div class="tt">Privacy Policy</div>
-
     <div class="txt">
       <span>
         This site does not collect, store, share, or sell any personally
@@ -17,8 +16,14 @@
         this site's
       </span>
       <a class="plc" href="/user-agreement">User Agreement</a><span>.</span>
+      <span>This document was last updated on</span>
+      <span>{{#if update}}{{update}}{{/if}}</span><span>.
     </div>
     <div class="txt">
+      <div class="brd-t pd10-t">
+        <span>This page was last accessed on</span>
+        <span id="timestamp"></span><span>.</span>
+      </div>
     </div>
   </div>
 </div>
