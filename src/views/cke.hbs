@@ -14,14 +14,14 @@
     </div>
     <div class="txt">
       <span>
-        This Cookie Policy lists all the cookies used by this site, the
-        location where the cookies are stored, the expiration date of these
-        cookies if any, and a description of the purpose of the cookies and how
-        they are used. This Cookie Policy also defines the conditions that
-        constitute your consent to the use of cookies on this site and informs
-        you of your ability to select which cookies to allow if any and how to
-        make, change, or remove your selection. Finally, this Cookie Policy
-        relates this site's use of cookies to this site's
+        This Cookie Policy lists all the cookies used by this site with a
+        description of the purpose of each cookie and how it is used, the
+        location where the cookie is stored, the expiration date if any,
+        and the cookie's host provider. This Cookie Policy also defines the
+        conditions that constitute your consent to the use of cookies on this
+        site and informs you of your ability to select which cookies to allow
+        if any and how to make, change, or remove your selection. Finally, this
+        Cookie Policy relates this site's use of cookies to this site's
       </span>
       <a class="plc" href="/privacy-policy">Privacy Policy</a><span> and
       </span>
@@ -109,7 +109,7 @@
         <div class="cke-key">ckNec?</div>
         <div class="cke-val">ckNecY</div>
         <div class="cke-des">
-          <div>
+          <div class="pd10-b">
             <span class="ita">Description</span><span>:</span>
             <span>
               This cookie is used to check your acceptance to the use of all
@@ -123,34 +123,38 @@
               selected any one or more of the other categories.
             </span>
           </div>
-          <div class="pd10-t">
+          <div class="pd10-b">
             <span class="ita">Method</span><span>:</span>
             <span>
               When you visit this site the site checks for this cookie's key at
-              the appropriate storage location (see location). If the cookie
-              value does not match the value for this key, indicating that you
-              have not accepted the use of this cookie, the site persistently
-              displays a policy notice informing you of this site's cookie
-              policy. In the absence of this cookie, the site also removes
-              elements of the site that would otherwise trigger the use of
-              necessary cookies, ensuring that your cookie preference is
-              honored. If the cookie value matches the value for this key,
-              indicating that you have agreed to the use of necessary cookies,
-              the aforementioned policy notice is removed and site elements
-              that only trigger the storage of necessary cookies are restored.
+              the appropriate storage location. If the cookie value does not
+              match the value for this key, indicating that you have not
+              accepted the use of this cookie, the site persistently displays a
+              policy notice informing you of this site's cookie policy. In the
+              absence of this cookie, the site also removes elements of the
+              site that would otherwise trigger the use of necessary cookies,
+              ensuring that your cookie preference is honored. If the cookie
+              value matches the value for this key, indicating that you have
+              agreed to the use of necessary cookies, the aforementioned policy
+              notice is removed and site elements that only trigger the storage
+              of necessary cookies are restored.
             </span>
           </div>
-          <div class="pd10-t">
+          <div class="pd10-b">
             <span class="ita">Location</span><span>:</span>
             <span>
-              This cookie is stored in your browser's local storage.
+              Local storage
             </span>
           </div>
-          <div class="pd10-tb">
+          <div class="pd10-b">
             <span class="ita">Expiration</span><span>:</span>
             <span>
-              This cookie has no expiration date.
+              None
             </span>
+          </div>
+          <div class="pd10-b">
+            <span class="ita">Host</span><span>:</span>
+            <span>{{#if host}}{{host}}{{/if}}</span>
           </div>
         </div>
         <div class="cke-key">theme</div>
@@ -195,6 +199,10 @@
             <span>
               This cookie has no expiration date.
             </span>
+          </div>
+          <div class="pd10-b">
+            <span class="ita">Host</span><span>:</span>
+            <span>{{#if host}}{{host}}{{/if}}</span>
           </div>
         </div>
       </div>
@@ -250,6 +258,10 @@
               This cookie has no expiration date.
             </span>
           </div>
+          <div class="pd10-b">
+            <span class="ita">Host</span><span>:</span>
+            <span>{{#if host}}{{host}}{{/if}}</span>
+          </div>
         </div>
       </div>
       <div class="brd-b"></div>
@@ -304,6 +316,10 @@
               This cookie has no expiration date.
             </span>
           </div>
+          <div class="pd10-b">
+            <span class="ita">Host</span><span>:</span>
+            <span>{{#if host}}{{host}}{{/if}}</span>
+          </div>
         </div>
       </div>
       <div class="brd-b"></div>
@@ -357,6 +373,10 @@
             <span>
               This cookie has no expiration date.
             </span>
+          </div>
+          <div class="pd10-b">
+            <span class="ita">Host</span><span>:</span>
+            <span>{{#if host}}{{host}}{{/if}}</span>
           </div>
         </div>
       </div>
@@ -413,8 +433,8 @@
         This Cookie Policy is a part of and subject to this sites
       </span>
       <a class="plc" href="/privacy-policy">Privacy Policy</a><span>.
-        By accepting the use of cookies on this site you acknowledge your
-        agreement to this site's Privacy Policy.
+        By accepting the use of cookies on this site you acknowledge that you
+        have read and understood this site's Privacy Policy.
       </span>
     </div>
     <div id="user-agreement" class="txt">
@@ -441,7 +461,7 @@
           have been applied to and made available through this document.
         </span>
         <span>This document was last updated on</span>
-        <span>{{update}}</span><span>.
+        <span>{{#if update}}{{update}}{{/if}}</span><span>.
           Submit inquiries by email to james.a.baroi@gmail.com.
         </span>
       </div>
