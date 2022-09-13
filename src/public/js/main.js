@@ -1,5 +1,12 @@
 // Use this main.js with index.hbs and main.css / main.scss
 
+// Hide broken image icon ----------------------------------------------------/
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('img').forEach((img) => {
+    img.onerror = () => { img.style.display = 'none'; };
+  });
+});
+
 // Change css (I) ------------------------------------------------------------/
 
 // (1) Toggle hamburger menu bars to x and back
@@ -329,3 +336,5 @@ function shLegal() {
   b2.append(privacy);
   scrUp();
 }
+
+

@@ -3,7 +3,10 @@
   {{#each results}}
   <a  class="proj-link"href="http://{{_host}}:{{_port}}" target="_blank">
     <div class="project">
-      <div class="name">Project #{{id}}. {{_name}}</div>
+      <div class="name">Project # {{id}}. {{_name}}</div>
+      <div class="img-cont">
+        <img class="img" src="img/{{_img}}">
+      </div>
       <div class="info">{{_info}}</div>
       <div class="keys">
         {{#if _key_01}}<span class="keywords">Keywords: </span>

@@ -39,21 +39,28 @@ _key_09,
 _key_10
 )
 VALUES
-
+('Periodic Table',
+'A web-app that displays a responsive and interactive periodic table of the
+chemical elements.',
+'localhost',
+'8081',
+'',
+'CSS', 'MySQL','NodeJS', 'ExpressJS', '', '', '', '', '', ''
+),
 ('Zombie Asteroids',
 'Kill space zombies, mine gold, and save the princess. Use arrow keys to move,
 space to brake, and "q" to hard brake. Press "w" to drop space mines (requires
 gold).',
 'localhost',
-'8081',
-'',
-'PC Game', 'Front-end','Javascript', 'Canvas', '', '', '', '', '', ''
-),
-('Conway''s Game',
-'Conway''s cellular automation game of life. Try out different configurations
-and appreciate beautiful mathematics.',
-'localhost',
 '8082',
 '',
-'PC Game', 'Front-end','Javascript', 'Canvas', '', '', '', '', '', ''
+'PC Game', 'Javascript', 'Canvas', '', '', '', '', '', '', ''
+),
+('Conway''s Game',
+'Conway''s cellular automaton. Try out different configurations and appreciate
+beautiful mathematics.',
+'localhost',
+'8083',
+'conways-game-screen-shot.jpg',
+'Cellular Automaton', 'Javascript', 'Canvas', '', '', '', '', '', '', ''
 );
