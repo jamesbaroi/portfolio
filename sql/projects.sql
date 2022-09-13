@@ -48,4 +48,12 @@ gold).',
 '8081',
 '',
 'PC Game', 'Front-end','Javascript', 'Canvas', '', '', '', '', '', ''
+),
+('Conway''s Game',
+'Conway''s cellular automation game of life. Try out different configurations
+and appreciate beautiful mathematics.',
+'localhost',
+'8082',
+'',
+'PC Game', 'Front-end','Javascript', 'Canvas', '', '', '', '', '', ''
 );
