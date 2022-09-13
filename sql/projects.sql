@@ -44,16 +44,16 @@ VALUES
 chemical elements.',
 'localhost',
 '8081',
-'',
+'periodic-table.jpg',
 'CSS', 'MySQL','NodeJS', 'ExpressJS', '', '', '', '', '', ''
 ),
 ('Zombie Asteroids',
-'Kill space zombies, mine gold, and save the princess. Use arrow keys to move,
+'Avoid space zombies, mine gold, and save the princess. Use arrow keys to move,
 space to brake, and "q" to hard brake. Press "w" to drop space mines (requires
 gold).',
 'localhost',
 '8082',
-'',
+'zombie-asteroids.jpg',
 'PC Game', 'Javascript', 'Canvas', '', '', '', '', '', '', ''
 ),
 ('Conway''s Game',
